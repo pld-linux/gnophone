@@ -1,4 +1,4 @@
-Summary:	Gnophone Internet Phone
+Summary:	Gnophone Open Source Communicator
 Name:		gnophone
 Version:	0.2.4
 Release:	1
@@ -15,7 +15,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
 %description
-empty
+Gnophone is an Open Source Internet telephone and more that allows you to make calls to other GnoPhone users or to an Asterisk PBX Gateway. 
+It supports a fully featured web interface allowing you to participate in various discussion groups. It also supports the full 
+rate GSM codec for great quality that doesn't require very high bandwidth.
 
 
 %prep
