@@ -5,6 +5,7 @@ Release:	1
 License:	LGPL/GPL
 Group:		Applications/Communications
 Source0:	ftp://ftp.gnophone.com/pub/gnophone/%{name}-%{version}.tar.gz
+#Source0-md5:	75cee76acbd930ccdf473352b1beab30
 Patch0:		%{name}-destdir.patch
 URL:		http://www.gnophone.com
 BuildRequires:	autoconf
