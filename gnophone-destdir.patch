@@ -1,0 +1,26 @@
+--- gnophone-0.2.4/images/Makefile.in~	Sat Jun 14 18:25:20 2003
++++ gnophone-0.2.4/images/Makefile.in	Sat Jun 14 18:25:20 2003
+@@ -201,9 +201,9 @@
+ 
+ 
+ install:
+-	install -c -d $(prefix)/lib/gnophone/images
++	install -c -d $(DESTDIR)$(prefix)/lib/gnophone/images
+ 	for x in *.png; do \
+-		install -m 644 $$x $(prefix)/lib/gnophone/images ; \
++		install -m 644 $$x $(DESTDIR)$(prefix)/lib/gnophone/images ; \
+ 	done
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+--- gnophone-0.2.4/images/Makefile.am~	Sat Jun 14 18:25:01 2003
++++ gnophone-0.2.4/images/Makefile.am	Sat Jun 14 18:25:01 2003
+@@ -1,7 +1,7 @@
+ EXTRA_DIST =	gnophone.png novideo.png
+ 
+ install:
+-	install -c -d $(prefix)/lib/gnophone/images
++	install -c -d $(DESTDIR)$(prefix)/lib/gnophone/images
+ 	for x in *.png; do \
+-		install -m 644 $$x $(prefix)/lib/gnophone/images ; \
++		install -m 644 $$x $(DESTDIR)$(prefix)/lib/gnophone/images ; \
+ 	done
