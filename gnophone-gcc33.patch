@@ -1,0 +1,68 @@
+--- gnophone-0.2.4/sounds/raw2h.c.orig	Fri Sep 21 19:37:37 2001
++++ gnophone-0.2.4/sounds/raw2h.c	Mon Jun 16 09:57:01 2003
+@@ -29,19 +29,19 @@
+ 	assert(res >= 0);
+ 	assert(res < sizeof(buf));
+ 	fprintf(o, 
+-"/*
+-  * Signed 16-bit audio data
+-  *
+-  * Source: %s
+-  *
+-  * Copyright (C) 1999, Mark Spencer and Linux Support Services
+-  *
+-  * Distributed under the terms of the GNU General Public License
+-  *
+-  */
+-
+-static signed short %s[] = {
+-",	argv[1], n);
++"/*\n"
++"  * Signed 16-bit audio data\n"
++"  *\n"
++"  * Source: %s\n"
++"  *\n"
++"  * Copyright (C) 1999, Mark Spencer and Linux Support Services\n"
++"  *\n"
++"  * Distributed under the terms of the GNU General Public License\n"
++"  *\n"
++"  */\n"
++"\n"
++"static signed short %s[] = {\n"
++,	argv[1], n);
+ 	for (x=0;x<res/2 - 1;x++) {
+ 		fprintf(o, "%#06hx, ", buf[x]);
+ 		if ((x % 10) == 9)
+--- gnophone-0.2.4/sounds/mkdtmf.c.orig	Fri Sep 21 19:37:37 2001
++++ gnophone-0.2.4/sounds/mkdtmf.c	Mon Jun 16 10:00:51 2003
+@@ -26,18 +26,18 @@
+     exit(1);
+ 
+   printf(
+-"/* 
+- * Signed 16-bit audio data representing '%s' in dtmf
+- * 
+- * Copyright (C) 2000, Linux Support Services, Inc.
+- * 
+- * Distributed under the terms of the GNU General
+- * Public License
+- *
+- */
+-
+-static short %s[] = { 
+-", argv[1], argv[2]);
++"/*\n"
++" * Signed 16-bit audio data representing '%s' in dtmf\n"
++" *\n"
++" * Copyright (C) 2000, Linux Support Services, Inc.\n"
++" *\n"
++" * Distributed under the terms of the GNU General\n"
++" * Public License\n"
++" *\n"
++" */\n"
++"\n"
++"static short %s[] = {\n"
++, argv[1], argv[2]);
+   
+   ap = argv[1];
+   while (*ap) {
