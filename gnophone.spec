@@ -12,6 +12,7 @@ URL:		http://www.gnophone.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	iax-devel
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,10 +24,10 @@ for great quality that doesn't require very high bandwidth.
 
 %description -l pl
 Gnophone jest Internetowym telefonem IP, pozwalaj±cym na telefonowanie
-do innych GnoPhone-ów lub do bramek Asterisk PBX. Wspiera pe³ny
-interfejs web-owy, który pozwala uczestniczyæ w ró¿nych grupach
-dyskusyjnych. Wspiera tak¿e w pe³ni kodek GSM, który nie potrzebuje do
-uzyskania dobrej jako¶ci du¿ego pasma.
+do innych GnoPhone'ów lub do bramek Asterisk PBX. Ma w pe³ni
+funkcjonalny interfejs WWW, który pozwala uczestniczyæ w ró¿nych
+grupach dyskusyjnych. Obs³uguje tak¿e ca³kowicie kodek GSM, który nie
+potrzebuje do uzyskania dobrej jako¶ci du¿ego pasma.
 
 %prep
 %setup -q
