@@ -1,4 +1,9 @@
 # TODO: zaptel (-lzap -ltonezone)
+#
+# 
+# Conditional build:
+%bcond_without	esd	# without esound
+#
 Summary:	Gnophone Open Source Communicator
 Summary(pl):	Gnophone - komunikator Open Source
 Name:		gnophone
@@ -10,10 +15,11 @@ Source0:	ftp://ftp.gnophone.com/pub/gnophone/%{name}-%{version}.tar.gz
 #Source0-md5:	75cee76acbd930ccdf473352b1beab30
 Patch0:		%{name}-destdir.patch
 Patch1:		%{name}-gcc33.patch
+Patch2:		%{name}-switch.patch
 URL:		http://www.gnophone.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	esound-devel
+%{?with_esd:BuildRequires:   esound-devel}
 BuildRequires:	gtk+-devel >= 1.2.0
 BuildRequires:	iax-devel
 BuildRequires:	imlib-devel
@@ -53,6 +59,7 @@ Modu³ d¼wiêku EsounD dla Gnophone.
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
@@ -60,7 +67,8 @@ rm -f missing
 %{__aclocal}  -I m4
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	%{!?with_esd:--disable-esd}
 
 %{__make}
 
@@ -83,6 +91,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/gnophone/modules/audio-oss.so
 %attr(755,root,root) %{_libdir}/gnophone/modules/audio-phone.so
 
+%if %{with esd}
 %files esd
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/gnophone/modules/audio-esd.so
+%endif 
