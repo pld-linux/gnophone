@@ -1,0 +1,10 @@
+--- gnophone-0.2.4/src/gnophone_gui.c.orig	2001-11-09 21:48:15.000000000 +0100
++++ gnophone-0.2.4/src/gnophone_gui.c	2004-11-09 12:58:19.892383448 +0100
+@@ -1396,6 +1396,7 @@
+ 		p->moving = 0;
+ 		break;
+ 	default:
++		break;
+ 	}
+ 	return FALSE;
+ }
