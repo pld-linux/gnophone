@@ -1,6 +1,6 @@
-# TODO: zaptel (-lzap -ltonezone)
+# TODO:
+# - zaptel (-lzap -ltonezone)
 #
-# 
 # Conditional build:
 %bcond_without	esd	# without esound
 #
@@ -47,7 +47,7 @@ potrzebuje do uzyskania dobrej jako¶ci du¿ego pasma.
 Summary:	EsounD audio module for Gnophone
 Summary(pl):	Modu³ d¼wiêku EsounD dla Gnophone
 Group:		Applications/Communications
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description esd
 EsounD audio module for Gnophone.
@@ -95,4 +95,4 @@ rm -rf $RPM_BUILD_ROOT
 %files esd
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/gnophone/modules/audio-esd.so
-%endif 
+%endif
