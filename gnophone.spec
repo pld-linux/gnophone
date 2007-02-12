@@ -5,7 +5,7 @@
 %bcond_without	esd	# without esound
 #
 Summary:	Gnophone Open Source Communicator
-Summary(pl):	Gnophone - komunikator Open Source
+Summary(pl.UTF-8):   Gnophone - komunikator Open Source
 Name:		gnophone
 Version:	0.2.4
 Release:	1
@@ -36,24 +36,24 @@ It supports a fully featured web interface allowing you to participate
 in various discussion groups. It also supports the full rate GSM codec
 for great quality that doesn't require very high bandwidth.
 
-%description -l pl
-Gnophone jest Internetowym telefonem IP, pozwalaj±cym na telefonowanie
-do innych GnoPhone'Ûw lub do bramek Asterisk PBX. Ma w pe≥ni
-funkcjonalny interfejs WWW, ktÛry pozwala uczestniczyÊ w rÛønych
-grupach dyskusyjnych. Obs≥uguje takøe ca≥kowicie kodek GSM, ktÛry nie
-potrzebuje do uzyskania dobrej jako∂ci duøego pasma.
+%description -l pl.UTF-8
+Gnophone jest Internetowym telefonem IP, pozwalajƒÖcym na telefonowanie
+do innych GnoPhone'√≥w lub do bramek Asterisk PBX. Ma w pe≈Çni
+funkcjonalny interfejs WWW, kt√≥ry pozwala uczestniczyƒá w r√≥≈ºnych
+grupach dyskusyjnych. Obs≈Çuguje tak≈ºe ca≈Çkowicie kodek GSM, kt√≥ry nie
+potrzebuje do uzyskania dobrej jako≈õci du≈ºego pasma.
 
 %package esd
 Summary:	EsounD audio module for Gnophone
-Summary(pl):	Modu≥ dºwiÍku EsounD dla Gnophone
+Summary(pl.UTF-8):   Modu≈Ç d≈∫wiƒôku EsounD dla Gnophone
 Group:		Applications/Communications
 Requires:	%{name} = %{version}-%{release}
 
 %description esd
 EsounD audio module for Gnophone.
 
-%description esd -l pl
-Modu≥ dºwiÍku EsounD dla Gnophone.
+%description esd -l pl.UTF-8
+Modu≈Ç d≈∫wiƒôku EsounD dla Gnophone.
 
 %prep
 %setup -q
