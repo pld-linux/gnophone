@@ -5,7 +5,7 @@
 %bcond_without	esd	# without esound
 #
 Summary:	Gnophone Open Source Communicator
-Summary(pl.UTF-8):   Gnophone - komunikator Open Source
+Summary(pl.UTF-8):	Gnophone - komunikator Open Source
 Name:		gnophone
 Version:	0.2.4
 Release:	1
@@ -45,7 +45,7 @@ potrzebuje do uzyskania dobrej jakości dużego pasma.
 
 %package esd
 Summary:	EsounD audio module for Gnophone
-Summary(pl.UTF-8):   Moduł dźwięku EsounD dla Gnophone
+Summary(pl.UTF-8):	Moduł dźwięku EsounD dla Gnophone
 Group:		Applications/Communications
 Requires:	%{name} = %{version}-%{release}
 
